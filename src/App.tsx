@@ -14,10 +14,10 @@ function App() {
     let [disabledReset, setDisabledReset] = useState(true)
 
     const callBackHandlerIncrement = () => {
-        if (number < maxValue)
+        if (number < maxValue) {
             setNumber(number + 1)
-        setDisabledReset(false)
-        if (number === maxValue) {
+            setDisabledReset(false)
+        } else if (number === maxValue) {
             setDisabledInc(true)
         }
     }
@@ -42,8 +42,11 @@ function App() {
                 number={number}
                 callBackHandlerIncrement={callBackHandlerIncrement}
                 callBackHandlerReset={callBackHandlerReset}
-                disabledInc={disabledInc}
-                disabledReset={disabledReset}
+                startValue={startValue}
+                maxValue={maxValue}
+
+                // disabledInc={disabledInc}
+                // disabledReset={disabledReset}
             />
         </div>
     )

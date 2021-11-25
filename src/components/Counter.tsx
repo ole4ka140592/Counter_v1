@@ -6,8 +6,10 @@ type propsType = {
     number: number
     callBackHandlerReset: () => void
     callBackHandlerIncrement: () => void
-    disabledInc: boolean
-    disabledReset: boolean
+    startValue: number
+    maxValue: number
+    // disabledInc: boolean
+    // disabledReset: boolean
 }
 
 export const Counter = (props: propsType) => {
@@ -19,12 +21,14 @@ export const Counter = (props: propsType) => {
             <div className={classes.buttons}>
                 <Button name='inc'
                         callBack={props.callBackHandlerIncrement}
-                        disabled={props.disabledInc}
+                        // disabled={props.disabledInc}
+                    disabled={props.number === props.maxValue}
 
                 />
                 <Button name='reset'
                         callBack={props.callBackHandlerReset}
-                        disabled={props.disabledReset}
+                        // disabled={props.disabledReset}
+                        disabled={props.number === props.startValue}
                 />
             </div>
         </div>

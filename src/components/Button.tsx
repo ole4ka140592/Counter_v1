@@ -3,6 +3,7 @@ import classes from "./Button.module.css"
 type propsButton = {
     name: string
     callBack: ()=> void
+    // disabled: boolean
     disabled: boolean
 }
 
@@ -13,7 +14,7 @@ export const Button = (props: propsButton)=> {
     }
 
     return (
-        <button onClick={onClickHandler} disabled={props.disabled} className={classes.button}>
+        <button onClick={onClickHandler} disabled={props.disabled}  className={classes.button}>
             {props.name}
         </button>
     )
