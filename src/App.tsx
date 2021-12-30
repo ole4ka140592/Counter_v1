@@ -23,16 +23,16 @@ function App() {
     }
 
     const callBackHandlerReset = () => {
-        if (number === maxValue) {
+        // if (number === maxValue) {
+        //     setNumber(startValue)
+        //     setDisabledReset(true)
+        //     setDisabledInc(false)
+        // } else if (number === startValue) {
+        //     setDisabledReset(true)
+        //     setDisabledInc(false)
+        // } else {
             setNumber(startValue)
-            setDisabledReset(true)
-            setDisabledInc(false)
-        } else if (number === startValue) {
-            setDisabledReset(true)
-            setDisabledInc(false)
-        } else {
-            setNumber(number - 1)
-        }
+        // }
     }
 
 
